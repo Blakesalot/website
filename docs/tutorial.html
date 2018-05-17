@@ -1,0 +1,29 @@
+<p>This is a simple tutorial explaining how you can document your Angular application easily with Compodoc.</p>
+<p>We will start with a blank Angular CLI project.</p>
+<h1>Requirements</h1><ul>
+<li>Angular CLI</li>
+<li>Node.js</li>
+<li>code editor or IDE</li>
+</ul>
+<h1>1. Run Angular CLI</h1><pre><code class="language-bash">ng new compodoc-tutorial
+</code></pre>
+<h1>2. Install compodoc</h1><pre><code class="language-bash">npm i --save-dev @compodoc/compodoc
+</code></pre>
+<p>Add npm scripts inside <code>package.json</code> file for generating the documentation : on for generation, one for serving it, and another combining them :</p>
+<pre><code class="language-json">...
+
+    &quot;ng&quot;: &quot;ng&quot;,
+    &quot;doc:build&quot;: &quot;compodoc -p src/tsconfig.app.json&quot;,
+    &quot;doc:serve&quot;: &quot;compodoc -s&quot;,
+    &quot;doc:buildandserve&quot;: &quot;compodoc -p src/tsconfig.app.json -s&quot;,
+    &quot;start&quot;: &quot;ng serve&quot;,
+
+...
+</code></pre>
+<h1>3. Run compodoc</h1><pre><code class="language-bash">npm run doc:buildandserve
+</code></pre>
+<p>You should see theses logs in your terminal.</p>
+<p><img src="../assets/img/tutorial/first-run-terminal.png" alt="first-run"></p>
+<p>and this in your browser opening <a href="http://localhost:8080">http://localhost:8080</a></p>
+<p><img src="../assets/img/tutorial/first-run-browser.png" alt="first-run"></p>
+<h1>Next steps coming soon...</h1>
